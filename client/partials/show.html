@@ -1,0 +1,13 @@
+<a class="logout" href="/logout">Logout</a>
+<p><a href="#!/questionboard">Home</a> | <a href="#!/answer/{{question._id}}">Answer this Question</a></p>
+<h1>{{question.text}}</h1>
+<h4>{{question.description}}</h4>
+
+<div class="answerlist" ng-repeat="answer in question.answers | orderBy: '-likes'">
+  <p style="color:green;">{{answer._user.name}}</p>
+  <div style="margin: 10px;">
+    <p>{{answer.text}}</p>
+    <p>{{answer.details}}</p>
+  </div>
+  {{answer.likes}} Likes <button class="likebutton" type="button" ng-click="addLike(answer._id)">Like</button>
+</div>

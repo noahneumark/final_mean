@@ -1,0 +1,13 @@
+<a class="logout" href="/logout">Logout</a>
+<a href="#!/questionboard">Home</a>
+
+<h1>New Question</h1>
+<div ng-messages="questionForm.question.$error" class="errors">
+  <p ng-message="required">Must enter your question.</p>
+  <p ng-message="minlength">Question must be at least 10 characters.</p>
+</div>
+<form name="questionForm">
+  <p><textarea name="question" rows="8" cols="80" placeholder="Question" ng-model="newQuestion.text" required minlength="10"></textarea></p>
+  <p><textarea name="description" rows="8" cols="80" placeholder="Description (optional)" ng-model="newQuestion.description"></textarea></p>
+  <p><a href="#!/questionboard"><button type="button" name="button">Cancel</button></a><input type="submit" value="Submit" ng-disabled="questionForm.$invalid" ng-click="addQuestion(newQuestion)"></p>
+</form>

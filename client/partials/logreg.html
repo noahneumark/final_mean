@@ -1,0 +1,22 @@
+<form class="logreg" name="registerForm">
+  <h4>Register</h4>
+  <div ng-messages="registerForm.myName.$error" class="errors">
+    <p ng-message="required">Must enter your name.</p>
+    <p ng-message="minlength">Name must be at least 2 characters.</p>
+  </div>
+  <p><input type="text" ng-model="newUser.name" placeholder="name" name="myName" required minlength="2"></p>
+  <div ng-messages="registerForm.myEmail.$error" class="errors">
+    <p ng-message="required">Must enter your email.</p>
+    <p ng-message="minlength">Email must be at least 5 characters.</p>
+  </div>
+  <p><input type="text" ng-model="newUser.email" placeholder="email" name="myEmail" required minlength="5"></p>
+  <p><input type="submit" ng-disabled="registerForm.$invalid" ng-click="registerUser(newUser)" value="Register"></p>
+</form>
+
+
+
+<form class="logreg">
+  <h4>Login</h4>
+  <p><input type="text" ng-model="logged.email" placeholder="email"></p>
+  <p><input type="submit" ng-click="logUser(logged)" value="Login"></p>
+</form>

@@ -1,0 +1,59 @@
+body {
+  background: rgb(255, 241, 199);
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.logreg {
+  border: 1px solid black;
+  border-radius: 5px;
+  background: rgb(255, 198, 153) ;
+  width: 400px;
+  margin: 10px auto;
+  padding: 5px;
+  text-align: center;
+}
+
+table {
+   font-family: arial, sans-serif;
+   border-collapse: collapse;
+   width: 100%;
+}
+
+td, th {
+   border: 1px solid black;
+   text-align: left;
+   padding: 8px;
+}
+
+th {
+   background: rgb(245, 175, 118);
+}
+
+tr:nth-child(even) {
+   background-color: rgb(255, 198, 153) ;
+}
+
+.logout {
+  display: block;
+  margin: 0 0 0 auto;
+  width: 80px;
+}
+
+.answerlist {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px;
+  background: hsl(44, 100%, 95%);
+}
+
+.likebutton {
+  background: blue;
+  color: white;
+}
+
+.errors {
+  color: red;
+  font-size: .7em;
+}

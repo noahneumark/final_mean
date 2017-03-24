@@ -1,0 +1,17 @@
+<a class="logout" href="/logout">Logout</a>
+<h2>Hello {{currentuser.name}}</h2>
+<p><a href="#!/addQuestion">Add a Question</a></p>
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Answers</th>
+    <th>Actions</th>
+  </tr>
+  <input type="text" ng-model="mysearch" placeholder="search">
+  <p></p>
+  <tr ng-repeat="question in questions | filter: mysearch">
+    <td>{{question.text}}</td>
+    <td>{{question.answers.length}}</td>
+    <td><a href="#!/show/{{question._id}}">Show</a> <a href="#!/answer/{{question._id}}">Answer</a></td>
+  </tr>
+</table>
